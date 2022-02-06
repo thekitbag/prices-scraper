@@ -1,0 +1,17 @@
+script starting at 2022-02-06 15:18:57.309142 
+data scraping finished at 2022-02-06 15:18:59.648566 
+email sent at 2022-02-06 15:19:01.014780 
+script starting at 2022-02-06 15:23:57.722526 
+data scraping finished at 2022-02-06 15:23:59.219172 
+email sent at 2022-02-06 15:24:00.311303 
+script starting at 2022-02-06 15:25:53.326837 
+data scraping finished at 2022-02-06 15:25:54.816667 
+email sent at 2022-02-06 15:25:55.990310 
+script starting at 2022-02-06 15:29:09.021310 
+data scraping finished at 2022-02-06 15:29:10.810203 
+email sent at 2022-02-06 15:29:11.779396 
+script starting at 2022-02-06 15:57:01.819892 
+data scraping finished at 2022-02-06 15:57:03.503852 
+script starting at 2022-02-06 15:58:40.186816 
+data scraping finished at 2022-02-06 15:58:41.922730 
+email sent at 2022-02-06 15:58:43.564036 

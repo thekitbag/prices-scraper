@@ -1,11 +1,11 @@
 #script for automating dad's machinery pricing job
 
-import os, requests, json, csv, datetime, time
+import os, sys, requests, json, csv, datetime, time
 from bs4 import BeautifulSoup, NavigableString
 import yagmail
 
 loggingfile = 'tracking.txt'
-file = f'mascusfortnightly{datetime.datetime.today()}.csv'
+file = f'mascusfortnightly{datetime.datetime.today().date()}.csv'
 
 with open(loggingfile, 'a', encoding='UTF8') as f:
 	f.write(f"script starting at {datetime.datetime.now()} \n")
@@ -18,7 +18,7 @@ with open(file, 'w', encoding='UTF8') as f:
 
 	writer.writerow(header)
 
-	for page_number in range(10):
+	for page_number in range(1):
 		results = []
 		url = f'https://www.mascus.co.uk/+/has%3dprice/+/{page_number},100,createdate_desc,search.html'
 		page = requests.get(url)
@@ -63,11 +63,11 @@ with open(loggingfile, 'a', encoding='UTF8') as f:
 				
 	
 yag = yagmail.SMTP('mascusdaily@gmail.com', os.getenv('MASCUS_EMAIL_PW'))
+print(file)
 
-contents = ['Here are the most recent 10 pages from mascus',
-            'CSV attached.', file]
+contents = 'Here are the most recent 10 pages from mascus'
 
-yag.send('afgray48@gmail.com', 'Daily Mascus Email', contents)
+yag.send(to='mfgray87@hotmail.com', subject='Daily Mascus Email', contents=contents, attachments=os.path.join(sys.path[0], f"mascusfortnightly{datetime.datetime.today().date()}.csv"))
 
 with open(loggingfile, 'a', encoding='UTF8') as f:
 	f.write(f"email sent at {datetime.datetime.now()} \n")
