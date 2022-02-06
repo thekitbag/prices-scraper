@@ -15,3 +15,6 @@ data scraping finished at 2022-02-06 15:57:03.503852
 script starting at 2022-02-06 15:58:40.186816 
 data scraping finished at 2022-02-06 15:58:41.922730 
 email sent at 2022-02-06 15:58:43.564036 
+script starting at 2022-02-06 17:35:52.212206 
+data scraping finished at 2022-02-06 17:35:53.861865 
+email sent at 2022-02-06 17:35:55.210183 

@@ -67,7 +67,7 @@ print(file)
 
 contents = 'Here are the most recent 10 pages from mascus'
 
-yag.send(to='mfgray87@hotmail.com', subject='Daily Mascus Email', contents=contents, attachments=file, f"mascusfortnightly{datetime.datetime.today().date()}.csv"))
+yag.send(to='mfgray87@hotmail.com', subject='Daily Mascus Email', contents=contents, attachments=file)
 
 with open(loggingfile, 'a', encoding='UTF8') as f:
 	f.write(f"email sent at {datetime.datetime.now()} \n")
