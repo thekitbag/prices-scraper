@@ -19,7 +19,7 @@ if datetime.datetime.today().weekday() == 6:
 
 		writer.writerow(header)
 
-		for page_number in range(100):
+		for page_number in range(10):
 			results = []
 			url = f'https://www.mascus.co.uk/+/has%3dprice/+/{page_number},100,createdate_desc,search.html'
 			page = requests.get(url)
