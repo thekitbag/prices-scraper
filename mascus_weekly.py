@@ -1,6 +1,6 @@
 #script for automating dad's machinery pricing job
 
-import requests, json, csv, datetime, time
+import os, requests, json, csv, datetime, time
 from bs4 import BeautifulSoup, NavigableString
 import yagmail
 
@@ -62,7 +62,7 @@ with open(loggingfile, 'a', encoding='UTF8') as f:
 	f.close()
 				
 	
-yag = yagmail.SMTP('mascusdaily@gmail.com', 'Tiypw4md!')
+yag = yagmail.SMTP('mascusdaily@gmail.com', os.getenv('MASCUS_EMAIL_PW'))
 
 contents = ['Here are the most recent 10 pages from mascus',
             'CSV attached.', file]
